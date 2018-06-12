@@ -88,10 +88,6 @@
                             <constraint firstAttribute="trailing" secondItem="dSN-qL-V3G" secondAttribute="trailing" id="x0f-cR-5Gs"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="swooshBg" destination="dSN-qL-V3G" id="FfK-JQ-iWM"/>
-                        <outlet property="swooshLogo" destination="VWE-nn-l5z" id="z48-Hs-SMT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,6 +136,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="09i-GQ-ngU" eventType="touchUpInside" id="n4O-lk-KWT"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oDj-jB-SvZ">
                                 <rect key="frame" x="16" y="182" width="343" height="205"/>
@@ -211,6 +210,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="tNg-RK-sLp" secondAttribute="trailing" id="whH-Ot-ozj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Kdh-wN-DpC" kind="show" identifier="showLeagueVC" id="B4h-pW-RLb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrL-dk-Bum" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XmS-Ut-lu7" userLabel="Exit" sceneMemberID="exit"/>
@@ -289,10 +291,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-jD-Jfd">
+                                <rect key="frame" x="16" y="35" width="45" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="CXc-b4-nwN"/>
+                                    <constraint firstAttribute="width" constant="45" id="d7n-97-I8x"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="pAF-0H-NmI" kind="unwind" unwindAction="unwinfFromLeagueVCWithUnwindSegue:" id="ki6-D4-LpV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vW2-ck-p3j" firstAttribute="top" secondItem="Hs7-QQ-nlQ" secondAttribute="bottom" id="E4V-wO-mNb"/>
+                            <constraint firstItem="hqh-jD-Jfd" firstAttribute="top" secondItem="cYe-Xj-1wb" secondAttribute="bottom" constant="15" id="F7O-p4-kkQ"/>
                             <constraint firstAttribute="trailing" secondItem="Hs7-QQ-nlQ" secondAttribute="trailing" id="Hdh-cn-zh7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hki-rg-58h" secondAttribute="trailing" id="Jff-kQ-BvT"/>
                             <constraint firstItem="vW2-ck-p3j" firstAttribute="top" secondItem="HYy-ul-5JZ" secondAttribute="bottom" constant="20" id="Ksg-fQ-OZS"/>
@@ -301,14 +315,17 @@
                             <constraint firstItem="Hs7-QQ-nlQ" firstAttribute="leading" secondItem="wBL-fQ-dE8" secondAttribute="leading" id="bbl-7J-9fk"/>
                             <constraint firstItem="T9E-Op-xLB" firstAttribute="leading" secondItem="wBL-fQ-dE8" secondAttribute="leadingMargin" id="bqn-6X-DzZ"/>
                             <constraint firstItem="HYy-ul-5JZ" firstAttribute="leading" secondItem="wBL-fQ-dE8" secondAttribute="leadingMargin" id="cJ6-rX-aR5"/>
+                            <constraint firstItem="hqh-jD-Jfd" firstAttribute="leading" secondItem="wBL-fQ-dE8" secondAttribute="leadingMargin" id="dxS-2i-YHD"/>
                             <constraint firstItem="Hs7-QQ-nlQ" firstAttribute="top" secondItem="wBL-fQ-dE8" secondAttribute="top" id="fOo-py-gWQ"/>
                             <constraint firstItem="HYy-ul-5JZ" firstAttribute="trailing" secondItem="wBL-fQ-dE8" secondAttribute="trailingMargin" id="g6B-EL-WSB"/>
+                            <constraint firstItem="hqh-jD-Jfd" firstAttribute="leading" secondItem="wBL-fQ-dE8" secondAttribute="leadingMargin" id="hAZ-uR-KoU"/>
                             <constraint firstItem="Hki-rg-58h" firstAttribute="top" secondItem="cYe-Xj-1wb" secondAttribute="bottom" constant="20" id="lMJ-pc-Lhi"/>
                             <constraint firstItem="T9E-Op-xLB" firstAttribute="top" secondItem="Hki-rg-58h" secondAttribute="bottom" constant="40" id="y1x-2E-JOL"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H80-1e-SUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pAF-0H-NmI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1615" y="117"/>
         </scene>
