@@ -10,10 +10,12 @@ import UIKit
 
 class SkillsVC: UIViewController {
 
+    var player: Player!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print(player.desiredLeague ?? "Error: No data was passed")
     }
 
     override func didReceiveMemoryWarning() {

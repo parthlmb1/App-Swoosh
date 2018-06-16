@@ -126,7 +126,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRk-em-bYa" customClass="BorderedButton" customModule="App_Swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRk-em-bYa" customClass="BorderedButton" customModule="App_Swoosh" customModuleProvider="target">
                                 <rect key="frame" x="16" y="592" width="343" height="55"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -153,6 +153,9 @@
                                         <state key="normal" title="MEN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mensTapped:" destination="09i-GQ-ngU" eventType="touchUpInside" id="VRw-Mm-hZW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lap-cP-PGn" customClass="BorderedButton" customModule="App_Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="75" width="343" height="55"/>
@@ -164,6 +167,9 @@
                                         <state key="normal" title="WOMEN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="womensTapped:" destination="09i-GQ-ngU" eventType="touchUpInside" id="9Lp-jd-rDM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9o-wU-RQJ" customClass="BorderedButton" customModule="App_Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="150" width="343" height="55"/>
@@ -175,6 +181,9 @@
                                         <state key="normal" title="CO-ED">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="coedTapped:" destination="09i-GQ-ngU" eventType="touchUpInside" id="WVa-ee-rFV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -211,6 +220,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="NRk-em-bYa" id="a49-gV-Gzo"/>
                         <segue destination="Kdh-wN-DpC" kind="show" identifier="showLeagueVC" id="B4h-pW-RLb"/>
                     </connections>
                 </viewController>
@@ -242,7 +252,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="VRk-uV-cEW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
-                                <state key="normal" title="NEXT">
+                                <state key="normal" title="FINISH">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
